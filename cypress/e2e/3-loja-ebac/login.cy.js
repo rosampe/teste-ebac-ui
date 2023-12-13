@@ -39,12 +39,17 @@ describe('Funcionalidade login', () =>{
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain' , 'Olá, rosampe.teste (não é rosampe.teste? Sair)')
     });
 
-    it.only('Deve fazer login com sucesso - Usando Fixture', () => {
+    it('Deve fazer login com sucesso - Usando Fixture', () => {
         cy.fixture('perfil').then(dados => {
             cy.get('#username').type(dados.usuario, {log: false})
             cy.get('#password').type(dados.senha, {log: false})
             cy.get('.woocommerce-form > .button').click()
             cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain' , 'Olá, rosampe.teste (não é rosampe.teste? Sair)')
         })
+    });
+
+    it('Deve fazer login com sucesso - usando comandos customizados ', () => {
+        cy.login('rosampe.teste@teste.com.br', 'teste@123')
+        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain' , 'Olá, rosampe.teste (não é rosampe.teste? Sair)')
     });
 })
