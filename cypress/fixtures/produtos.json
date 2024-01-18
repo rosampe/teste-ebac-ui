@@ -1,0 +1,20 @@
+[
+    {
+        "nomeProduto": "Helena Hooded Fleece",
+        "tamanho": "M",
+        "cor": "Yellow",
+        "quantidade": 2
+    },
+    {
+        "nomeProduto": "Circe Hooded Ice Fleece",
+        "tamanho": "L",
+        "cor": "Purple",
+        "quantidade": 3
+    },
+    {
+        "nomeProduto": "Ariel Roll Sleeve Sweatshirt",
+        "tamanho": "XS",
+        "cor": "Red",
+        "quantidade": 4
+    }
+]
